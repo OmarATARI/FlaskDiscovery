@@ -41,6 +41,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'me
 
 class NouveauForm(Form):
 	name = StringField("Nom", validators=[DataRequired()])
+	submit_button = SubmitField("Envoi")
 
 class CourseForm(Form):
 	name = StringField("Nom", validators=[DataRequired()])
@@ -52,7 +53,7 @@ class CourseForm(Form):
 
 	# WIP
 	# for k,v in dic:
-	# 	k = BooleanField(f'{v}', validators=[DataRequired()])
+	# 	k = SelectField(f'{v}', validators=[DataRequired()])
 	submit_button = SubmitField("Envoi")
 
 class Post(db.Model):
