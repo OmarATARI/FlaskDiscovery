@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block description %}
+	{% include "navigation.html" %}
+
+	<ul>
+	{% for element in liste %}
+		<li> {{ element }}</li>
+	{% endfor %}
+	</ul>
+
+
+ {% endblock %}
